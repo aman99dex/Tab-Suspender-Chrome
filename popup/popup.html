@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Suspender</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Lightweight Tab Suspender</h3>
+    
+    <div class="control-row">
+      <label for="pause-toggle">Pause Suspension</label>
+      <label class="switch">
+        <input type="checkbox" id="pause-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="button-group">
+      <button id="suspend-current" class="btn btn-secondary">
+        Suspend Current Tab
+      </button>
+      <button id="suspend-others" class="btn btn-secondary">
+        Suspend Other Tabs
+      </button>
+      <button id="unsuspend-all" class="btn btn-secondary btn-success">
+        Unsuspend All Tabs
+      </button>
+    </div>
+    <hr>
+    
+    <h4>Whitelist Current Site</h4>
+    <div class="whitelist-box">
+      <p id="current-domain">loading...</p>
+      <button id="whitelist-current" class="btn btn-secondary btn-small">
+        Whitelist
+      </button>
+    </div>
+    
+    <button id="open-search" class="btn btn-primary">
+      Search Suspended Tabs
+    </button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suspended Tab</title>
+  <link rel="stylesheet" href="suspended.css">
+  <link id="favicon" rel="icon" href="">
+</head>
+<body>
+  
+  <div class="fake-browser-bar">
+    <div class="fake-tab">
+      <img id="tab-favicon" src="" alt="" class="fake-favicon">
+      <span id="tab-title">Suspended Tab</span>
+    </div>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="main-message">
+      <h1 id="page-title"></h1>
+      <p>This tab has been suspended to save resources.</p>
+      <h2>Please Reload the Page to Unsuspend</h2>
+    </div>
+
+    <div class="url-placeholder">
+      <strong>Original URL:</strong>
+      <span id="original-url-text">Loading...</span>
+    </div>
+    <div class="summary-box">
+      <h3>Summary of the Contents:</h3>
+      <p id="summary-content">
+        Loading summary...
+      </p>
+    </div>
+  </div>
+
+  <!-- <div class="main-message">
+      <h1 id="page-title"></h1>
+      <p>This tab has been suspended to save resources.</p>
+      
+      <h2>Click Anywhere on This Page to Unsuspend</h2>
+    </div> -->
+
+  <script src="suspended.js"></script>
+</body>
+</html>

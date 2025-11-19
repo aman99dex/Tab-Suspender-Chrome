@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Suspended Tabs</title>
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+  
+  <header>
+    <h1>Suspender Dashboard</h1>
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="search">Search</button>
+      <button class="tab-btn" data-tab="settings">Settings</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="tab-panel active" id="search">
+      <div class="search-controls">
+        <input type="text" id="search-input" placeholder="Search by title, domain, or URL...">
+        <div class="bulk-actions">
+          <button id="unsuspend-selected" class="btn btn-secondary btn-success">Unsuspend Selected</button>
+          <button id="close-selected" class="btn btn-secondary btn-danger">Close Selected</button>
+        </div>
+      </div>
+      <ul id="suspended-list" class="list-container">
+        </ul>
+      <p id="no-results" class="empty-state">No suspended tabs found.</p>
+    </div>
+
+    <div class="tab-panel" id="settings">
+      <h2>Settings</h2>
+      
+      <div class="setting-item">
+        <label for="suspend-time">Suspend tabs after (minutes):</label>
+        <input type="number" id="suspend-time" min="1" value="15">
+      </div>
+      
+      <div class="setting-item">
+        <label for="ai-key">AI Summary API Key (Optional):</label>
+        <input type="password" id="ai-key" placeholder="Enter your OpenAI/Gemini key">
+      </div>
+      
+      <div class="setting-item">
+        <h3>Whitelist</h3>
+        <p>Add domains or regex (e.g., `github.com` or `/dev\.local/`) to prevent suspension.</p>
+        <div class="whitelist-manage">
+          <input type="text" id="whitelist-input" placeholder="Add new domain or regex...">
+          <button id="whitelist-add" class="btn btn-secondary">Add</button>
+        </div>
+        <ul id="whitelist-list" class="list-container small">
+          </ul>
+      </div>
+
+      <button id="save-settings" class="btn btn-primary">Save Settings</button>
+      <p id="save-status" class="status-message"></p>
+    </div>
+  </main>
+
+  <script src="search.js"></script>
+</body>
+</html>
